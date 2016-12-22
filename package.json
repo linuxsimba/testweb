@@ -1,0 +1,22 @@
+{
+  "name": "testweb",
+  "version": "1.0.0",
+  "description": "Test Web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linuxsimba/testweb.git"
+  },
+  "author": "stanley@linuxsimba.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linuxsimba/testweb/issues"
+  },
+  "homepage": "https://github.com/linuxsimba/testweb#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

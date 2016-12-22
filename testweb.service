@@ -1,0 +1,13 @@
+[Unit]
+Description=Start testweb docker container
+After=docker.service
+Requires=docker.service
+
+[Service]
+WorkingDirectory=/opt/testweb
+ExecStartPre=/usr/local/bin/docker-compose stop
+ExecStart=/usr/local/bin/docker-compose up
+
+[Install]
+WantedBy=multi.user.target
+

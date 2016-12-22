@@ -1,0 +1,22 @@
+version: '2'
+
+networks:
+  testweb_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.210.0/24
+          gateway: 192.168.210.1
+
+services:
+  testweb:
+    build:
+      context: .
+    hostname: "${HYPERVISOR_HOSTNAME}"
+    image: linuxsimba/testweb:latest
+    container_name: testweb
+    networks:
+      - testweb_net
+    ports:
+      - 80:8000
